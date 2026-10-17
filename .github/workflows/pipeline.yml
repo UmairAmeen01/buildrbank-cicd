@@ -214,7 +214,7 @@ jobs:
             docker run -d --name bank --restart unless-stopped -p 8000:8000 --env-file ~/.env ${{ env.DOCKERHUB_USER }}/${{ env.IMAGE }}:main
 
       - name: Is production actually up?
-        # The deploy step going green only means the commands ran. This asks
+        # Th deploy step going green only means the commands ran. This asks
         # the server itself. /health says "ok" only after the agent has been
         # built and has reached Supabase - so a green tick here means the
         # whole thing works, not just that Docker was willing to start it.
